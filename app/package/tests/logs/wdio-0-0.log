@@ -1,0 +1,26 @@
+2021-02-16T07:17:27.521Z WARN @wdio/mocha-framework: Unable to load spec files quite likely because they rely 2021-02-16T07:17:27.263Z DEBUG @wdio/local-runner:utils: init remote session
+2021-02-16T07:17:27.576Z DEBUG @wdio/local-runner:utils: init remote session
+2021-02-16T07:17:27.576Z INFO webdriver: Initiate new session using the WebDriver protocol
+2021-02-16T07:17:27.578Z INFO webdriver: [POST] http://127.0.0.1:4444/session
+2021-02-16T07:17:27.578Z INFO webdriver: DATA { capabilities:
+   { alwaysMatch: { browserName: 'chrome', chromeOptions: [Object] },
+     firstMatch: [ {} ] },
+  desiredCapabilities:
+   { browserName: 'chrome', chromeOptions: { binary: './dist/' } } }
+2021-02-16T07:17:27.593Z ERROR webdriver: RequestError: connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.request.once (/Users/patricklamb/sprt4/balena-electronjs-react/electron/app/node_modules/@wdio/runner/node_modules/got/dist/source/core/index.js:953:111)
+    at Object.onceWrapper (events.js:286:20)
+    at ClientRequest.emit (events.js:203:15)
+    at ClientRequest.EventEmitter.emit (domain.js:448:20)
+    at ClientRequest.origin.emit.args (/Users/patricklamb/sprt4/balena-electronjs-react/electron/app/node_modules/@wdio/runner/node_modules/@szmarczak/http-timer/dist/source/index.js:39:20)
+    at Socket.socketErrorListener (_http_client.js:392:9)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at emitErrorNT (internal/streams/destroy.js:91:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
+2021-02-16T07:17:27.594Z ERROR @wdio/runner: Error: Failed to create session.
+Unable to connect to "http://127.0.0.1:4444/", make sure browser driver is running on that address.
+If you use services like chromedriver see initialiseServices logs above or in wdio.log file as the service might had problems to start the driver.
+    at Object.startWebDriverSession (/Users/patricklamb/sprt4/balena-electronjs-react/electron/app/node_modules/@wdio/runner/node_modules/webdriver/build/utils.js:68:15)
+    at process._tickCallback (internal/process/next_tick.js:68:7)

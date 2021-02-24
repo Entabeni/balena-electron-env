@@ -13,7 +13,7 @@ RUN make
 
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
-RUN npm i
+RUN JOBS=MAX npm install --no-optional --unsafe-perm && npm cache clean --force
 COPY tsconfig.webpack.json tsconfig.json webpack.config.ts ./
 COPY src src/
 COPY typings typings/
@@ -28,30 +28,30 @@ COPY --from=builder /usr/src/clicklock/clicklock /usr/bin/clicklock
 RUN \
 	apt-get update \
 	&& apt-get install -y \
-		# Electron runtime dependencies
-		libasound2 \
-		libgdk-pixbuf2.0-0 \
-		libglib2.0-0 \
-		libgtk-3-0 \
-		libnss3 \
-		libx11-xcb1 \
-		libxss1 \
-		libxtst6 \
-		# Onscreen keyboard
-		onboard \
-		dconf-cli \
-		metacity \
-		# x11
-		xserver-xorg \
-		xinit \
-		# includes xset
-		x11-xserver-utils \
-		# emojis (used on the wifi config page)
-		fonts-symbola \
-		# mount ntfs partitions
-		ntfs-3g \
-		# for exposing --remote-debugging-port to other computers
-		simpleproxy \
+	# Electron runtime dependencies
+	libasound2 \
+	libgdk-pixbuf2.0-0 \
+	libglib2.0-0 \
+	libgtk-3-0 \
+	libnss3 \
+	libx11-xcb1 \
+	libxss1 \
+	libxtst6 \
+	# Onscreen keyboard
+	onboard \
+	dconf-cli \
+	metacity \
+	# x11
+	xserver-xorg \
+	xinit \
+	# includes xset
+	x11-xserver-utils \
+	# emojis (used on the wifi config page)
+	fonts-symbola \
+	# mount ntfs partitions
+	ntfs-3g \
+	# for exposing --remote-debugging-port to other computers
+	simpleproxy \
 	&& rm -rf /var/lib/apt/lists/*
 COPY --from=builder /usr/src/app/build /usr/lib/balena-electronjs
 COPY .xserverrc /root/.xserverrc

@@ -1,0 +1,6 @@
+2020-11-16T12:41:33.232Z INFO @wdio/cli:Launcher: Run onPrepare hook
+2020-11-16T12:41:33.237Z INFO @wdio/local-runner: Start worker 0-0 with arg: wdio.conf.js,--spec
+2020-11-16T12:44:40.805Z DEBUG @wdio/local-runner: Runner 0-0 finished with exit code 0
+2020-11-16T12:44:40.807Z INFO @wdio/local-runner: Start worker 0-1 with arg: wdio.conf.js,--spec
+2020-11-16T13:04:58.741Z DEBUG @wdio/local-runner: Runner 0-1 finished with exit code 1
+2020-11-16T13:04:58.742Z INFO @wdio/cli:Launcher: Run onComplete hook
