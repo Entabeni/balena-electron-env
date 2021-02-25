@@ -1,4 +1,0 @@
-2021-02-16T07:17:26.906Z INFO @wdio/local-runner: Start worker 0-0 wi2021-02-16T07:17:26.906Z INFO @wdio/cli:launcher: Run onWorkerS2021-02-162021-02-16T07:17:27.711Z INFO @wdio/cli:launcher: Run onComplete hook
- code 1
-2021-02-16T07:17:27.712Z INFO @wdio/local-runner: Shutting down spawned worker
-2021-02-16T07:17:27.969Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
