@@ -1,7 +1,0 @@
-export { Table, LazyTable } from './Table'
-export { TableHead } from './TableHead'
-export { TableFoot } from './TableFoot'
-export { TableBody } from './TableBody'
-export { TableRow } from './TableRow'
-export { TableHeaderElement } from './TableHeaderElement'
-export { TableCellHeader, TableCellData } from './TableCells'

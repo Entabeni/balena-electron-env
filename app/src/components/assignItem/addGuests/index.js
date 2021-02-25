@@ -1,5 +1,0 @@
-export { SelectGuest } from './SelectGuest'
-export { CreateGuest } from './CreateGuest'
-export { CaptureGuestPhoto } from './CaptureGuestPhoto'
-export { CaptureGuestDOB } from './CaptureGuestDOB'
-export { CaptureGuestRentalDetails } from './CaptureGuestRentalDetails'

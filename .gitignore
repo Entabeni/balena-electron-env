@@ -114,7 +114,8 @@ package-lock.json
 
 
 ### React ###
+cups/*
 cups
 build
-app/dist
-app/node_modules
+electron/app/dist
+electron/app/node_modules

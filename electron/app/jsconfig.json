@@ -1,0 +1,23 @@
+// tsconfig.json
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "paths": {
+            "es-themes/*": [
+                "src/themes/*"
+            ],
+            "es-components/*": [
+                "src/components/*"
+            ],
+            "es-pages/*": [
+                "src/pages/*"
+            ],
+            "es-libs/*": [
+                "src/libs/*"
+            ],
+            "es-context/*": [
+                "src/context/*"
+            ]
+        }
+    }
+}

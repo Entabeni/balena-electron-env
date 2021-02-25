@@ -1,0 +1,41 @@
+version: "2"
+volumes:
+  settings:
+  cookies:
+  cups:
+services:
+  electron:
+    build: ./electronu
+    privileged: true
+    tmpfs:
+      - /tmp
+    environment:
+      - DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
+    ports:
+      - "80"
+    labels:
+      io.balena.features.kernel-modules: "1"
+      io.balena.features.firmware: "1"
+      io.balena.features.dbus: "1"
+      io.balena.features.balena-api: "1"
+      io.balena.features.supervisor-api: "1"
+    network_mode: host
+    volumes:
+      - "settings:/data"
+  # cups:
+  #   build: ./cups
+  #   ports:
+  #     - "80"
+  #   privileged: true
+  #   restart: always
+  #   environment:
+  #     - DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
+  #   network_mode: host
+  #   volumes:
+  #     - "cups:/etc/cups"
+  #   labels:
+  #     io.balena.features.kernel-modules: "1"
+  #     io.balena.features.firmware: "1"
+  #     io.balena.features.dbus: "1"
+  #     io.balena.features.supervisor-api: "1"
+  #     io.balena.features.balena-api: "1"
